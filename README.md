@@ -176,5 +176,5 @@ Cloud deployment (AWS / GCP)
 👨‍🎓 Author
 
 Veeresh A
-INT-331 – Fundamentals of DevOps
+
 Lovely Professional University
