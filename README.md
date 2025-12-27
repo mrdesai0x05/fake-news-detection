@@ -40,7 +40,7 @@ Decision Tree
 
 Gradient Boosting
 
-Random Forest
+Random forest
 
 Vectorization: TF-IDF
 
