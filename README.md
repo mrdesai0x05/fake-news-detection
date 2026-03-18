@@ -1,4 +1,5 @@
 📰 Fake News Detection System - ML with CI/CD Integration
+
 📌 Project Overview
 
 This repository contains our project for the CSE316 course at Lovely Professional University, submitted as part of Academic Task-1. Our team developed a Fake News Detection System that analyzes online news content and classifies it as Fake or Real using Machine Learning and Natural Language Processing (NLP).
@@ -16,11 +17,14 @@ Automatically validate workflows using CI/CD pipelines.
 Calculate and display model performance metrics:
 
 ✅ Accuracy
+
 ✅ Precision
+
 ✅ Recall
+
 ✅ F1-score
 
-✨ Features
+✨** Features**
 
 ✔ Multiple ML Algorithms: Logistic Regression, Decision Tree, Gradient Boosting, Random Forest
 ✔ Text Processing Pipeline: Cleans and preprocesses real-world news data
@@ -28,6 +32,7 @@ Calculate and display model performance metrics:
 ✔ Model Comparison: Evaluates performance across different classifiers
 ✔ CI/CD Integration: Automates testing and validation using GitHub Actions
 ✔ Manual Testing: Allows users to input custom news text for prediction
+
 
 🚀 How to Run It
 
@@ -41,17 +46,23 @@ Ensure Python is added to your system PATH
 2️⃣ Install Required Libraries
 
 Open terminal or command prompt and run:
-
 pip install pandas numpy scikit-learn matplotlib seaborn
-3️⃣ Clone or Download the Repository
-git clone https://github.com/your-repo-link/fake-news-detection.git
 
+3️⃣ Clone or Download the Repository
+
+git clone https://github.com/your-repo-link/fake-news-detection.git
 Or download ZIP from GitHub and extract it
 
+
 4️⃣ Navigate to Project Directory
+
 cd fake-news-detection
+
 5️⃣ Run the Project
+
 python main.py
+
+
 📂 Project Structure
 
 The project is divided into multiple modules for better maintainability:
@@ -64,7 +75,6 @@ The project is divided into multiple modules for better maintainability:
 👥 Team Members and Contributions
 
 Our team consists of members responsible for different parts of the system:
-
 Veeresh A (12319252): Developed ML models and CI/CD integration
 
 
@@ -130,6 +140,6 @@ Preprocessing removes noise such as URLs, punctuation, and symbols
 We made multiple commits in this repository to track development progress.
 Check commit history for detailed implementation steps!
 
-📚 Course: CSE316
+📚 Course: INT331
 🏫 Institution: Lovely Professional University
 📅 Date: December 27, 2025
