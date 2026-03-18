@@ -1,145 +1,226 @@
-📰 Fake News Detection System - ML with CI/CD Integration
+# 📰 Fake News Detection using Machine Learning
 
-📌 Project Overview
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![ML](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-This repository contains our project for the CSE316 course at Lovely Professional University, submitted as part of Academic Task-1. Our team developed a Fake News Detection System that analyzes online news content and classifies it as Fake or Real using Machine Learning and Natural Language Processing (NLP).
+---
 
-The project also integrates DevOps practices such as Git, GitHub, and CI/CD pipelines, ensuring automation, reproducibility, and efficient model validation.
+## 📌 Project Overview
 
-🔹 What It Does
+This project implements a **Fake News Detection System** using **Machine Learning and Natural Language Processing (NLP)**.
+It classifies news articles as **Fake 🛑 or Real ✅** based on textual content.
 
-Our Fake News Detection System allows users to:
+Additionally, it integrates **DevOps practices** like Git, GitHub, and **CI/CD pipelines** to ensure automation, reliability, and reproducibility.
 
-Select different machine learning models for prediction.
-Input news text and classify it as Fake or Real.
-Train and evaluate multiple ML algorithms.
-Automatically validate workflows using CI/CD pipelines.
-Calculate and display model performance metrics:
+---
 
-✅ Accuracy
+## 🎯 Objectives
 
-✅ Precision
+✔ Detect fake news using NLP techniques
 
-✅ Recall
+✔ Compare multiple ML algorithms
 
-✅ F1-score
+✔ Automate workflows using CI/CD
 
-✨** Features**
+✔ Maintain reproducible ML pipelines
 
-✔ Multiple ML Algorithms: Logistic Regression, Decision Tree, Gradient Boosting, Random Forest
-✔ Text Processing Pipeline: Cleans and preprocesses real-world news data
-✔ Feature Extraction: Uses TF-IDF vectorization
-✔ Model Comparison: Evaluates performance across different classifiers
-✔ CI/CD Integration: Automates testing and validation using GitHub Actions
-✔ Manual Testing: Allows users to input custom news text for prediction
+✔ Demonstrate ML + DevOps integration
 
+---
 
-🚀 How to Run It
+## ✨ Features
 
-Follow these steps to set up and run the project on your system:
+✔ Multiple ML Models (LR, DT, GBoost, RF)
 
-1️⃣ Install Python 3
+✔ TF-IDF based feature extraction
 
-Download and install Python 3 from python.org
-Ensure Python is added to your system PATH
+✔ Real-time manual news testing
 
-2️⃣ Install Required Libraries
+✔ High accuracy (up to 99%)
 
-Open terminal or command prompt and run:
-pip install pandas numpy scikit-learn matplotlib seaborn
+✔ Automated CI/CD pipeline
 
-3️⃣ Clone or Download the Repository
+✔ Clean and modular code structure
 
-git clone https://github.com/your-repo-link/fake-news-detection.git
-Or download ZIP from GitHub and extract it
+---
 
+## 🛠️ Tech Stack
 
-4️⃣ Navigate to Project Directory
+### 🔹 Programming
 
-cd fake-news-detection
+* Python 3
 
-5️⃣ Run the Project
+### 🔹 Libraries
 
-python main.py
+* Pandas, NumPy
+* Scikit-learn
+* Matplotlib, Seaborn
 
+### 🔹 Machine Learning
 
-📂 Project Structure
+* Logistic Regression
+* Decision Tree
+* Gradient Boosting
+* Random Forest
 
-The project is divided into multiple modules for better maintainability:
+### 🔹 DevOps
 
-📌 Main Script (main.py): Integrates all components and runs the system
-📊 Data Processing Module: Handles data cleaning and preprocessing
-🤖 ML Model Module: Implements and trains different classifiers
-📈 Evaluation Module: Computes performance metrics and results
+* Git
+* GitHub
+* GitHub Actions (CI/CD)
 
-👥 Team Members and Contributions
+---
 
-Our team consists of members responsible for different parts of the system:
-Veeresh A (12319252): Developed ML models and CI/CD integration
+## 📂 Dataset
 
+Dataset consists of:
 
-🛠️ Technologies Used
+* `Fake.csv` → Fake news
+* `True.csv` → Real news
 
-Python 3: Core programming language
+Each contains:
 
-Libraries Used:
+* title
+* text
+* subject
+* date
 
-Pandas, NumPy → Data handling
+Labeling:
 
-Scikit-learn → Machine Learning models
+* `0 → Fake`
+* `1 → Real`
 
-Matplotlib, Seaborn → Visualization
+---
 
-ML Techniques:
+## ⚙️ Project Workflow
+
+### 1️⃣ Data Loading
+
+Load datasets using Pandas
+
+### 2️⃣ Data Preprocessing
+
+* Lowercasing
+* Removing URLs, punctuation
+* Cleaning text
+
+### 3️⃣ Train-Test Split
+
+Split dataset into training and testing
+
+### 4️⃣ Feature Extraction
 
 TF-IDF Vectorization
 
-Supervised Learning Algorithms
+### 5️⃣ Model Training
 
-DevOps Tools:
+| Model               | Accuracy |
+| ------------------- | -------- |
+| Logistic Regression | 98.31%   |
+| Decision Tree       | 99.59%   |
+| Gradient Boosting   | 99.56%   |
+| Random Forest       | 98.66%   |
 
-Git → Version control
+---
 
-GitHub → Collaboration
+## 🧪 Manual Testing
 
-GitHub Actions → CI/CD automation
+```python
+manual_testing("Breaking news text here")
 
-🔄 Development Process
+# Sample Output:
+LR Prediction : Fake News  
+DT Prediction : Fake News  
+GBC Prediction: Fake News  
+RFC Prediction: Fake News  
+```
 
-Repository Setup: Created GitHub repository for collaboration
+---
 
-Module Development:
-Each component (preprocessing, models, evaluation) was developed separately
+## 🔁 CI/CD Integration
 
-Integration & Testing:
-Ensured all modules work together seamlessly
+✔ Runs automatically on every GitHub push
 
-CI/CD Setup:
-Automated testing and validation using GitHub Actions
+✔ Installs dependencies
 
-Documentation:
-Created this README.md for project explanation
+✔ Executes checks
 
-🧪 Notes
+✔ Ensures code reliability
 
-The system supports real-time prediction using manual input
-CI/CD pipeline runs automatically on every push
-Dataset includes labeled fake and real news articles
-Preprocessing removes noise such as URLs, punctuation, and symbols
+---
 
-🔮 Future Improvements
+## 🚀 How to Run
 
-✅ Deploy as a web application (Streamlit / Flask)
-✅ Add deep learning models (LSTM, BERT)
-✅ Integrate Docker for containerization
-✅ Enable cloud deployment (AWS / GCP)
-✅ Improve UI for better user interaction
+### 1️⃣ Install Python
 
-📌 GitHub Contributions
+Make sure Python 3 is installed
 
-We made multiple commits in this repository to track development progress.
-Check commit history for detailed implementation steps!
+### 2️⃣ Install Dependencies
 
-📚 Course: INT331
-🏫 Institution: Lovely Professional University
-📅 Date: December 27, 2025
+```bash
+pip install pandas numpy scikit-learn matplotlib seaborn
+```
+
+### 3️⃣ Clone Repository
+
+```bash
+git clone https://github.com/your-repo-link/fake-news-detection.git
+```
+
+### 4️⃣ Run Project
+
+```bash
+python main.py
+```
+
+---
+
+## 📊 Project Outcomes
+
+✔ High accuracy fake news detection system
+
+✔ Successfully implemented ML models
+
+✔ Integrated CI/CD pipeline
+
+✔ Built industry-relevant DevOps workflow
+
+✔ Resume-ready project
+
+---
+
+## 🔮 Future Enhancements
+
+🚀 Web app deployment (Streamlit / Flask)
+
+🚀 Deep learning models (LSTM, BERT)
+
+🚀 Docker integration
+
+🚀 Cloud deployment (AWS / GCP)
+
+🚀 Improved UI
+
+---
+
+## 👨‍🎓 Author
+
+**Veeresh A**
+Lovely Professional University
+
+---
+
+## 📚 Course
+
+INT331
+
+## 📅 Date
+
+December 27, 2025
+
+---
+
+⭐ If you like this project, don't forget to star the repo!
