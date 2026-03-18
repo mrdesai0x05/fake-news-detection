@@ -1,180 +1,135 @@
-# fake-news-detection
-A real-time fake news detection system that analyzes online content to identify and flag misleading or false information using machine learning and natural language processing.
-📰 Fake News Detection Using Machine Learning with CI/CD Integration
+📰 Fake News Detection System - ML with CI/CD Integration
 📌 Project Overview
 
-This project implements a Fake News Detection System using Machine Learning and integrates it into a DevOps workflow using Git, GitHub, and CI/CD pipelines.
-The system classifies news articles as Fake or Real based on textual content using multiple ML models.
+This repository contains our project for the CSE316 course at Lovely Professional University, submitted as part of Academic Task-1. Our team developed a Fake News Detection System that analyzes online news content and classifies it as Fake or Real using Machine Learning and Natural Language Processing (NLP).
 
-The goal of this project is not only to build an accurate ML model but also to demonstrate version control, automation, reproducibility, and continuous integration, aligning with modern DevOps practices.
+The project also integrates DevOps practices such as Git, GitHub, and CI/CD pipelines, ensuring automation, reproducibility, and efficient model validation.
 
-🎯 Objectives
+🔹 What It Does
 
-Detect fake news using NLP and Machine Learning
+Our Fake News Detection System allows users to:
 
-Compare multiple ML classifiers
+Select different machine learning models for prediction.
+Input news text and classify it as Fake or Real.
+Train and evaluate multiple ML algorithms.
+Automatically validate workflows using CI/CD pipelines.
+Calculate and display model performance metrics:
 
-Automate model validation using CI/CD
+✅ Accuracy
+✅ Precision
+✅ Recall
+✅ F1-score
 
-Maintain reproducible ML workflows using Git
+✨ Features
 
-Demonstrate DevOps concepts in an ML project
+✔ Multiple ML Algorithms: Logistic Regression, Decision Tree, Gradient Boosting, Random Forest
+✔ Text Processing Pipeline: Cleans and preprocesses real-world news data
+✔ Feature Extraction: Uses TF-IDF vectorization
+✔ Model Comparison: Evaluates performance across different classifiers
+✔ CI/CD Integration: Automates testing and validation using GitHub Actions
+✔ Manual Testing: Allows users to input custom news text for prediction
 
-🛠️ Tools & Technologies
+🚀 How to Run It
 
-Programming Language: Python
+Follow these steps to set up and run the project on your system:
 
-Libraries:
+1️⃣ Install Python 3
 
-Pandas, NumPy
+Download and install Python 3 from python.org
+Ensure Python is added to your system PATH
 
-Scikit-learn
+2️⃣ Install Required Libraries
 
-Matplotlib, Seaborn
+Open terminal or command prompt and run:
 
-ML Models Used:
+pip install pandas numpy scikit-learn matplotlib seaborn
+3️⃣ Clone or Download the Repository
+git clone https://github.com/your-repo-link/fake-news-detection.git
 
-Logistic Regression
+Or download ZIP from GitHub and extract it
 
-Decision Tree
+4️⃣ Navigate to Project Directory
+cd fake-news-detection
+5️⃣ Run the Project
+python main.py
+📂 Project Structure
 
-Gradient Boosting
+The project is divided into multiple modules for better maintainability:
 
-Random forest
+📌 Main Script (main.py): Integrates all components and runs the system
+📊 Data Processing Module: Handles data cleaning and preprocessing
+🤖 ML Model Module: Implements and trains different classifiers
+📈 Evaluation Module: Computes performance metrics and results
 
-Vectorization: TF-IDF
+👥 Team Members and Contributions
+
+Our team consists of members responsible for different parts of the system:
+
+Veeresh A (12319252): Developed ML models and CI/CD integration
+
+
+🛠️ Technologies Used
+
+Python 3: Core programming language
+
+Libraries Used:
+
+Pandas, NumPy → Data handling
+
+Scikit-learn → Machine Learning models
+
+Matplotlib, Seaborn → Visualization
+
+ML Techniques:
+
+TF-IDF Vectorization
+
+Supervised Learning Algorithms
 
 DevOps Tools:
 
-Git
+Git → Version control
 
-GitHub
+GitHub → Collaboration
 
-GitHub Actions (CI/CD)
+GitHub Actions → CI/CD automation
 
-📂 Dataset
+🔄 Development Process
 
-The dataset consists of two CSV files:
+Repository Setup: Created GitHub repository for collaboration
 
-Fake.csv → Fake news articles
+Module Development:
+Each component (preprocessing, models, evaluation) was developed separately
 
-True.csv → Real news articles
+Integration & Testing:
+Ensured all modules work together seamlessly
 
-Each dataset contains:
+CI/CD Setup:
+Automated testing and validation using GitHub Actions
 
-title
+Documentation:
+Created this README.md for project explanation
 
-text
+🧪 Notes
 
-subject
+The system supports real-time prediction using manual input
+CI/CD pipeline runs automatically on every push
+Dataset includes labeled fake and real news articles
+Preprocessing removes noise such as URLs, punctuation, and symbols
 
-date
+🔮 Future Improvements
 
-A new column class is added:
+✅ Deploy as a web application (Streamlit / Flask)
+✅ Add deep learning models (LSTM, BERT)
+✅ Integrate Docker for containerization
+✅ Enable cloud deployment (AWS / GCP)
+✅ Improve UI for better user interaction
 
-0 → Fake News
+📌 GitHub Contributions
 
-1 → Real News
+We made multiple commits in this repository to track development progress.
+Check commit history for detailed implementation steps!
 
-⚙️ Project Workflow
-1️⃣ Data Loading
-data_fake = pd.read_csv('Fake.csv')
-data_true = pd.read_csv('True.csv')
-
-2️⃣ Data Preprocessing
-
-Lowercasing text
-
-Removing URLs, punctuation, numbers
-
-Removing HTML tags
-
-Cleaning unnecessary symbols
-
-Custom preprocessing function:
-
-def wordopt(text):
-    text = text.lower()
-    text = re.sub(r'https?://\S+|www\.\S+', '', text)
-    text = re.sub(r'[%s]' % re.escape(string.punctuation), '', text)
-    text = re.sub(r'\W', ' ', text)
-    return text
-
-3️⃣ Train-Test Split
-x_train, x_test, y_train, y_test = train_test_split(
-    x, y, test_size=0.25
-)
-
-4️⃣ Feature Extraction (TF-IDF)
-vectorization = TfidfVectorizer()
-xv_train = vectorization.fit_transform(x_train)
-xv_test = vectorization.transform(x_test)
-
-5️⃣ Model Training & Evaluation
-Model	Accuracy
-Logistic Regression	98.31%
-Decision Tree	99.59%
-Gradient Boosting	99.56%
-Random Forest	98.66%
-
-Decision Tree and Gradient Boosting performed the best.
-
-6️⃣ Classification Report Example
-Accuracy: 1.00
-Precision: 1.00
-Recall: 1.00
-F1-score: 1.00
-
-🧪 Manual Testing
-
-Users can input any news text and receive predictions from all models.
-
-manual_testing("Breaking news text here")
-
-Sample Output:
-LR Prediction : Fake News
-DT Prediction : Fake News
-GBC Prediction: Fake News
-RFC Prediction: Fake News
-
-🔁 CI/CD Integration
-
-Every push to GitHub triggers GitHub Actions
-
-Automatically:
-
-Sets up Python environment
-
-Installs dependencies
-
-Runs sanity checks
-
-Ensures reliability and reproducibility
-
-📌 Project Outcomes
-
-Successfully built a high-accuracy fake news classifier
-
-Integrated Machine Learning with DevOps workflows
-
-Implemented CI/CD automation
-
-Gained hands-on experience with real-world ML + DevOps integration
-
-Developed a resume-worthy academic project
-
-🚀 Future Enhancements
-
-Deploy as a web application (Streamlit / Flask)
-
-Add deep learning models (LSTM / BERT)
-
-Integrate Docker for containerization
-
-Cloud deployment (AWS / GCP)
-
-👨‍🎓 Author
-
-Veeresh A
-
-Lovely Professional University
+📚 Course: CSE316
+🏫 Institution: Lovely Professional University
+📅 Date: December 27, 2025
